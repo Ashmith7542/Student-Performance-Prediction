@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body onload="loadNavbar(); loadStudentData();">
+
+<nav class="navbar">
+
+    <div class="nav-left">
+        <img src="/student-performance-predictor/Logo.png" class="nav-logo" width="70">
+        <span class="welcome-text">
+            Welcome, <span id="navUsername"></span>
+        </span>
+    </div>
+
+    <div class="nav-right">
+
+        <div class="profile-wrapper">
+            <div class="profile-circle" id="profileCircle" onclick="toggleProfileMenu()"></div>
+
+            <div class="profile-dropdown" id="profileDropdown">
+
+                <div class="profile-header">
+                    <div class="profile-large" id="profileLarge"></div>
+                    <span id="dropdownUsername"></span>
+                </div>
+
+                <div class="dropdown-divider"></div>
+
+                <button onclick="openSettings()">⚙ Settings</button>
+                <button onclick="openProfileUpdate()">👤 Profile Update</button>
+                <button onclick="logout()">🚪 Logout</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</nav>
+
+</nav>
+
+<div class="main-container">
+    <h1>Welcome</h1>
+    <h3 id="studentName"></h3>
+
+    <div class="glass-card">
+        <p><b>English:</b> <span id="english"></span></p>
+        <p><b>Mathematics:</b> <span id="mathematics"></span></p>
+        <p><b>Physics:</b> <span id="science"></span></p>
+        <p><b>Chemistry:</b> <span id="chemistry"></span></p>
+        <p><b>Average:</b> <span id="average"></span></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

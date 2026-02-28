@@ -1,0 +1,302 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* ===============================
+   LANDING CENTER FIX
+================================ */
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* Perfect Centering */
+.landing-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
+    text-align: center;
+}
+
+/* Logo */
+.landing-container img {
+    width: 220px;              /* adjust if needed */
+    margin-bottom: 20px;
+}
+
+/* Title */
+.landing-container h1 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+/* Welcome Button */
+.welcome-btn {
+    padding: 14px 45px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.welcome-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===============================
+   MODAL BACKDROP
+================================ */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(6px);
+}
+
+/* ===============================
+   GLASS BOX
+================================ */
+.modal-content {
+    width: 400px;
+    padding: 40px 30px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ===============================
+   SLIDING TABS
+================================ */
+.tab-container {
+    position: relative;
+    display: flex;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    color: white;
+    font-weight: 600;
+}
+
+.slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    border-radius: 50px;
+    transition: 0.3s ease;
+    left: 0%;
+}
+
+/* ===============================
+   FORM
+================================ */
+select,
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    font-size: 15px;
+}
+
+/* Fix dropdown text color */
+select option {
+    color: black;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.submit-btn {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+    height: 70px;
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    height: 40px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ===============================
+   PROFILE SECTION
+================================ */
+.nav-right {
+    position: relative;
+}
+
+.profile-container {
+    cursor: pointer;
+}
+
+.profile-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.profile-circle:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown */
+.profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 140px;
+    padding: 10px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    display: none;
+    flex-direction: column;
+
+    animation: fadeDown 0.3s ease forwards;
+}
+
+.profile-dropdown button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.profile-dropdown button:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   DASHBOARD CENTER
+================================ */
+.dashboard-container {
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-card {
+    width: 450px;
+    padding: 40px;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+
+    font-size: 18px;
+    line-height: 2;
+}

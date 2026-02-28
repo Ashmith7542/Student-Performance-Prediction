@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="landing-container">
+    <img src="/student-performance-predictor/Logo.png" alt="Logo">
+    <h1>Student Performance Predictor</h1>
+    <button class="welcome-btn" onclick="openModal()">Welcome</button>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeModal()">×</span>
+
+        <!-- Sliding Tabs -->
+        <div class="tab-container">
+            <div class="slider" id="slider"></div>
+            <div class="tab-btn active" id="loginTab" onclick="switchTab('login')">
+                Login
+            </div>
+            <div class="tab-btn" id="signupTab" onclick="switchTab('signup')">
+                Signup
+            </div>
+        </div>
+
+        <select id="role">
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+        </select>
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+
+        <button class="submit-btn" onclick="handleSubmit()" id="submitBtn">
+            Login
+        </button>
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
